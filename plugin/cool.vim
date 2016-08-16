@@ -46,6 +46,7 @@ if &hlsearch
     cnoremap <silent> <expr> <CR> <sid>Cool()
 
     autocmd! CursorMoved * silent! call <sid>Cooler()
+    autocmd! InsertEnter * silent! set nohlsearch
 
     function! s:Cool()
         if getcmdtype() =~ '[/?]'
